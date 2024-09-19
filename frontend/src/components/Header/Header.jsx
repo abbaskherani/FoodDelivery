@@ -2,6 +2,10 @@ import React from 'react'
 import './Header.css'
 
 
+/**
+ * Renders the header component of the application
+ * @returns {JSX.Element} A div containing the header with background image, text content, and a button
+ */
 const Header = () => {
   return (
     <div className='header h-[34vw] bg-[url(./header_img.png)] relative bg-contain'>

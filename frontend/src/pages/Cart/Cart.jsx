@@ -1,6 +1,10 @@
 import React, { useContext } from 'react'
 import './Cart.css';
 import { StoreContext } from '../../context/StoreContext';
+/**
+ * Renders the Cart component displaying the items in the shopping cart
+ * @returns {JSX.Element} A div containing the cart items layout
+ */
 const Cart = () => {
 
   const {cartItems,food_list,removeFromCart} = useContext(StoreContext);

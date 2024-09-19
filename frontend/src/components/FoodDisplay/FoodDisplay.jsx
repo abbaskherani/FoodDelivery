@@ -2,7 +2,18 @@ import React, { useContext } from "react";
 // import './FoodDisplay.css';
 import { StoreContext } from "../../context/StoreContext";
 import FoodItem from "../FoodItem/FoodItem";
+/**
+ * Renders a display of food items filtered by category
+ * @param {string} category - The category to filter food items by
+ * @returns {JSX.Element} A div containing a title and a grid of FoodItem components
+ */
 const FoodDisplay = ({ category }) => {
+  /**
+   * Renders a list of food items based on the selected category
+   * @param {Array} food_list - An array of food items to be displayed
+   * @param {string} category - The currently selected category filter
+   * @returns {JSX.Element[]} An array of FoodItem components that match the category
+   */
   const { food_list } = useContext(StoreContext);
   return (
     <div className="food-display mt-8" id="food-display">

@@ -1,6 +1,10 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
 import './Footer.css'
+/**
+ * Footer component that renders the website's footer section
+ * @returns {JSX.Element} A div containing the footer content including logo, social icons, company links, contact information, and copyright text
+ */
 const Footer = () => {
   return (
     <div className='footer text-[#d9d9d9] bg-[#323232] flex flex-col items-center gap-5 py-5 px-[8vw] pt-[80px] mt-[100px]' id='footer'>
