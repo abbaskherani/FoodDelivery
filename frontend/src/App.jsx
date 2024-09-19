@@ -7,6 +7,11 @@ import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 import Footer from "./components/Footer/Footer";
 import LoginPopup from "./components/LoginPopup/LoginPopup";
 
+/**
+ * Main App component that handles routing and conditional rendering of components
+ * @param {void} - This component doesn't accept any parameters
+ * @returns {JSX.Element} The rendered App component with navigation, routes, and conditional login popup
+ */
 const App = () => {
   const [showLogin, setshowLogin] = useState(false);
 
