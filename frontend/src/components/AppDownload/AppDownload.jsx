@@ -1,6 +1,10 @@
 import React from "react";
 import "./AppDownload.css";
 import { assets } from "../../assets/assets";
+/**
+ * Renders an app download section with links to download the Tomato App.
+ * @returns {JSX.Element} A div containing text and images for app store downloads.
+ */
 const AppDownload = () => {
   return <div className="app-download m-auto mt-[100px] text-[max(3vw,20px)] text-center font-medium" id="app-download">
     <p>For Better Experience Download <br /> Tomato App</p>
