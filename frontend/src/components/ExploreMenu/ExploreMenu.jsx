@@ -3,8 +3,21 @@ import './ExploreMenu.css';
 
 import { menu_list } from '../../assets/assets';
 
+    /**
+     * Renders an explore menu component with category selection functionality
+     * @param {string} category - The currently selected menu category
+     * @param {function} setCategory - Function to update the selected category
+     * @returns {JSX.Element} A div containing the explore menu UI with category selection
+     */
     const ExploreMenu = ({category,setCategory}) => {
 
+/**
+ * Renders a list of menu items with clickable images and names
+ * @param {Array} menu_list - An array of menu item objects containing menu_name and menu_image properties
+ * @param {string} category - The currently selected category
+ * @param {function} setCategory - Function to update the selected category
+ * @returns {Array} An array of JSX elements representing menu items
+ */
 // console.log(category,item.menu_name);
   return (
     <div className='explore-menu flex flex-col gap-5' id='explore-menu'>
@@ -14,7 +27,17 @@ import { menu_list } from '../../assets/assets';
             {menu_list.map((item,index)=>{
                 console.log(category,item.menu_name)
                 return (
+                    /**
+                     * Handles click event to toggle category selection
+                     * @param {Function} onClick - Event handler for div click
+                     * @returns {void} Updates category state based on current selection
+                     */
                     <div onClick={()=> {
+                        /**
+                         * Updates the category state based on the selected menu item
+                         * @param {function} prev - The previous state setter function for the category
+                         * @returns {string} The new category value: "All" if the previous category matches the item's menu name, otherwise the item's menu name
+                         */
                         setCategory(prev=> 
                         prev===item.menu_name? "All" : item.menu_name)}} 
                         key={index} className='explore-menu-list-item'>
